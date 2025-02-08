@@ -29,6 +29,12 @@ const Laptop = () => {
     return milestonesData.map((milestone, index) => {
       const coordinates = getCoordinates(milestone.percent);
       let verticalOffset = index % 2 === 0 ? 100 : -100;
+
+      // Move "Registration Open" milestone higher
+      if (index === 0) {
+        verticalOffset -= 50; // Adjusting height for better visibility
+      }
+
       return { ...milestone, coordinates, verticalOffset };
     });
   }, [pathRef.current]);
@@ -57,7 +63,7 @@ const Laptop = () => {
       <img src={leftSVG} alt="Left Graphic" className="absolute left-0 bottom-0 w-72 md:w-96 lg:w-[30rem]" />
 
       <div className="relative w-full max-w-[80vw] text-black flex items-center justify-center">
-        <svg viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+        <svg viewBox="0 0 1000 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full cursor-pointer">
           <motion.path
             ref={pathRef}
             d="M50 100 C 250 450, 750 50, 950 380"
@@ -73,6 +79,7 @@ const Laptop = () => {
 
           {milestones.map((event, index) => (
             <React.Fragment key={index}>
+              {/* Circle Indicator */}
               <motion.circle
                 cx={event.coordinates?.x}
                 cy={event.coordinates?.y}
@@ -85,28 +92,29 @@ const Laptop = () => {
                 transition={{ duration: 0.6, delay: index * 0.3 }}
                 whileHover={{ scale: 1.8, fill: "#ff4d4d", transition: { duration: 0.3 } }}
               />
-              <motion.text
-                x={event.coordinates?.x}
-                y={event.coordinates?.y + event.verticalOffset}
-                fontSize="22"
-                fontWeight="bold"
-                fill="black"
-                textAnchor="middle"
+
+              <motion.g
                 initial={{ opacity: 0, y: -20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
                 transition={{ duration: 0.5, delay: index * 0.4 }}
               >
-                {event.title}
-              </motion.text>
-              <motion.text
-                x={event.coordinates?.x}
-                y={event.coordinates?.y + event.verticalOffset + 26}
-                fontSize="18"
-                fill="#666"
-                textAnchor="middle"
-              >
-                {event.date}
-              </motion.text>
+                <text x={event.coordinates?.x + (index === 0 ? 80 : 0)}
+                  y={event.coordinates?.y + (index === 0 ? -50 : event.verticalOffset)}
+                  fontSize="22"
+                  fontWeight="bold"
+                  fill="black"
+                  textAnchor="middle"
+                  className="transition-all text-xl duration-300 hover:fill-red-500">
+                  {event.title}
+                </text>
+                <text x={event.coordinates?.x + (index === 0 ? 70 : 0)}
+                  y={event.coordinates?.y + (index === 0 ? -25 : event.verticalOffset + 26)}
+                  fontSize="18"
+                  fill="#666"
+                  textAnchor="middle">
+                  {event.date}
+                </text>
+              </motion.g>
             </React.Fragment>
           ))}
         </svg>
