@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import bg from "../assets/grid_bg.svg";
 
 const faqs = [
   { question: "Who is eligible to participate in the TRAINIT Hackathon?", answer: "Anyone with a passion for technology and innovation can participate." },
@@ -16,7 +17,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen flex flex-col items-center justify-center px-6 py-16">
+    <div className="min-h-screen w-screen flex flex-col items-center justify-center px-6 py-16 bg-cover" style={{backgroundImage: `url(${bg})`}}>
       {/* Title */}
       <motion.h1
         className="text-6xl font-normal squid-font text-black mb-4"
@@ -34,7 +35,7 @@ const FAQSection = () => {
       ></motion.div>
 
       {/* FAQ Section */}
-      <div className="max-w-4xl w-full border border-red-500">
+      <div className="max-w-4xl bg-red-600 text-white w-full border border-white">
         {faqs.map((faq, index) => (
           <div
             key={index}
@@ -44,7 +45,7 @@ const FAQSection = () => {
             {/* Question */}
             <motion.div
               layout
-              className="flex items-center justify-between p-4 text-red-600 font-semibold text-lg"
+              className="flex items-center justify-between p-4 font-semibold text-lg"
             >
               <span>{faq.question}</span>
               <motion.span
@@ -60,7 +61,7 @@ const FAQSection = () => {
             <AnimatePresence>
               {openIndex === index && (
                 <motion.div
-                  className="p-4 text-gray-700 overflow-hidden"
+                  className="p-4 text-white overflow-hidden"
                   initial={{ clipPath: "inset(0% 0% 100% 0%)", opacity: 0 }}
                   animate={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1 }}
                   exit={{ clipPath: "inset(0% 0% 100% 0%)", opacity: 0 }}
