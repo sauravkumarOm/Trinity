@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import bg from "../assets/grid_bg.svg"
 
 const sponsors = [
   { title: "PLATFORM PARTNER", logo: "https://via.placeholder.com/150" },
@@ -18,7 +19,7 @@ const Sponsors = () => {
   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
 
   return (
-    <div className="bg-white pt-16 text-center">
+    <div className=" pt-16 text-center w-screen min-h-screen py-10 bg-no-repeat">
       <motion.h1
         ref={ref}
         className="text-5xl font-normal squid-font text-black mb-6"
