@@ -13,6 +13,7 @@ import Detail from "./Detail";
 import Sponsors from "./Sponser";
 import FAQSection from "./FAQ";
 import Footer from "./Footer";
+import bg from "../assets/grid_bg.svg"
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,7 +47,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full bg-black bg-opacity-80 text-white px-6 py-4 fixed top-0 left-0 z-50 shadow-md">
+    <nav className="w-screen bg-black bg-opacity-80 text-white py-4 fixed top-0 left-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img src={Logo} alt="Logo" className="h-10 w-auto" />
@@ -73,7 +74,7 @@ const Navbar = () => {
         </div>
       </div>
       {menuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-black bg-opacity-90 py-4 flex flex-col space-y-4 items-center">
+        <div className="md:hidden absolute top-full left-0 w-screen bg-black bg-opacity-90 py-4 flex flex-col space-y-4 items-center">
           {navItems.map((item, index) => (
             <ScrollLink
               key={index}
@@ -97,8 +98,8 @@ const Navbar = () => {
 
 const HomePage = () => {
   return (
-    <div id="home" className="flex flex-col relative min-h-screen">
-      <div className="relative w-full min-h-screen">
+    <div id="home" className="flex flex-col relative w-screen min-h-screen">
+      <div className="relative w-screen min-h-screen">
         <div className="absolute inset-0">
           <img src={Img1} alt="Homepage" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -125,7 +126,7 @@ const HomePage = () => {
       <div id="tracks" className="px-4 md:px-0"> <Tracks /> </div>
       <div id="timeline" className="px-4 md:px-0"> <Timeline /> </div>
       <div id="detail" className="px-4 md:px-0"> <Detail /> </div>
-      <div id="sponsors" className="px-4 md:px-0"> <Sponsors /> </div>
+      <div id="sponsors" className="" style={{backgroundImage: `url(${bg})`}}> <Sponsors /> </div>
       <div id="faq" className="px-4 md:px-0"> <FAQSection /> </div>
       <div id="contact" className="px-4 md:px-0"> <Footer /> </div>
     </div>
