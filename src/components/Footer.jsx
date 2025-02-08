@@ -12,7 +12,7 @@ function SquidGameCharacter() {
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 text-white p-6 grid grid-cols-1 md:grid-cols-4 gap-8 items-center text-left">
+        <footer className="bg-gray-900 w-screen text-white p-6 grid grid-cols-1 md:grid-cols-4 gap-8 items-center text-left">
             {/* 3D Model Section */}
             <div className="flex justify-center items-center h-64">
                 <Canvas camera={{ position: [0, 2, 5], fov: 45 }} className="h-full w-32 cursor-pointer">
