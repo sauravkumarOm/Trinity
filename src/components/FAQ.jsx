@@ -17,7 +17,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center justify-center px-6 py-16 bg-cover" style={{backgroundImage: `url(${bg})`}}>
+    <div className="min-h-screen w-screen flex flex-col items-center justify-center px-6 py-16 ">
       {/* Title */}
       <motion.h1
         className="text-6xl font-normal squid-font text-black mb-4"
