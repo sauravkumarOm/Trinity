@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
-import bg from "../assets/page 2 1.jpg";
+import React, { useState, useEffect, useRef } from "react";
+import bg from "../assets/grid_bg.svg";
 import underline from "../assets/Screenshot 2025-02-02 013531.png";
+import { motion, useInView } from "framer-motion";
 
 const Countdown = () => {
+    const ref = useRef(null);
+    const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
+
     const calculateTimeLeft = () => {
-        const eventDate = new Date("2025-03-19T00:00:00"); // Set event date to March 19
+        const eventDate = new Date("2025-03-19T00:00:00");
         const difference = eventDate - new Date();
 
         let timeLeft = {};
@@ -29,15 +33,31 @@ const Countdown = () => {
     }, []);
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-[80vh] bg-cover bg-center py-10"  >
-            <h1 className="text-5xl font-bold mb-2 text-black relative squid-font">
+        <div
+            className="flex flex-col items-center justify-center min-h-screen w-screen py-10 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${bg})` }}
+        >
+            <motion.h1
+                ref={ref}
+                className="text-5xl font-normal squid-font text-black mb-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+            >
                 EvEnt wilL stArT In
-
-            </h1>
-            <img src={underline} alt="underline" className=" w-80 mt-2 h-8 mx-auto" />
+            </motion.h1>
+            <motion.div
+                className="h-1 w-32 bg-red-500 mx-auto mb-12"
+                initial={{ scaleX: 0 }}
+                animate={isInView ? { scaleX: 1 } : {}}
+                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            ></motion.div>
             <div className="flex space-x-4 mt-6 mb-6">
                 {Object.entries(timeLeft).map(([unit, value]) => (
-                    <div key={unit} className="flex flex-col items-center bg-white p-6 shadow-lg rounded-lg border border-gray-200">
+                    <div
+                        key={unit}
+                        className="flex flex-col items-center bg-white p-6 shadow-lg rounded-lg border border-gray-200"
+                    >
                         <span className="text-5xl font-bold text-black">{value}</span>
                         <span className="text-sm uppercase font-medium text-gray-600">{unit}</span>
                     </div>
