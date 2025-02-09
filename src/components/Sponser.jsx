@@ -119,7 +119,7 @@ const Mobile = () => {
             <img
               src={sponsor.logo}
               alt={sponsor.title}
-              className="h-16 mt-8 rounded-lg shadow-md"
+              className="h-16 mt-8 rounded-lg shadow-md bg-white"
             />
           </motion.div>
         ))}
