@@ -1,18 +1,15 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Unstop from "../assets/unstop.png";
+import Punekar from "../assets/punekar.png";
+import XYZ from "../assets/xyz.png";
 import bg from "../assets/grid_bg.svg"
 import { useMediaQuery } from "react-responsive";
 
 const sponsors = [
-  { title: "PLATFORM PARTNER", logo: "https://via.placeholder.com/150" },
-  { title: "HOSTING PARTNER", logo: "https://via.placeholder.com/150" },
-  { title: "DIGITAL MEDIA PARTNER", logo: "https://via.placeholder.com/150" },
-  { title: "DOMAIN SPONSOR", logo: "https://via.placeholder.com/150" },
-  { title: "BEVERAGE SPONSOR", logo: "https://via.placeholder.com/150" },
-  { title: "BEVERAGE SPONSOR", logo: "https://via.placeholder.com/150" },
-  { title: "FOOD SPONSOR", logo: "https://via.placeholder.com/150" },
-  { title: "FOOD SPONSOR", logo: "https://via.placeholder.com/150" },
-  { title: "FOOD SPONSOR", logo: "https://via.placeholder.com/150" },
+  { title: "HOSTING PARTNER", logo: Unstop },
+  { title: "DIGITAL MEDIA PARTNER", logo: Punekar },
+  { title: "DOMAIN SPONSOR", logo: XYZ },
 ];
 
 const Laptop = () => {
@@ -37,7 +34,7 @@ const Laptop = () => {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
       ></motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-6xl mx-auto px-4">
+      <div className="grid grid-cols-2 gap-12 w-1/2 mx-auto px-4">
         {sponsors.map((sponsor, index) => (
           <motion.div
             key={index}
@@ -56,7 +53,7 @@ const Laptop = () => {
             <img
               src={sponsor.logo}
               alt={sponsor.title}
-              className="h-24 mt-10 rounded-lg shadow-md"
+              className="h-24 mt-10 rounded-lg shadow-md bg-white"
             />
           </motion.div>
         ))}

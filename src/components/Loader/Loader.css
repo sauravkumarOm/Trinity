@@ -1,6 +1,6 @@
 :root {
-    --path: red;
-    --dot: black;
+    --dot: #ED184B;
+    --path: black;
     --duration: 3s;
 }
 

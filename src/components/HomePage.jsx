@@ -20,10 +20,30 @@ const navItems = [
   { name: "Home", path: "home" },
   { name: "Tracks", path: "tracks" },
   { name: "Timeline", path: "timeline" },
+  { name: "Detail", path: "detail" },
   { name: "Sponsors", path: "sponsors" },
   { name: "FAQ", path: "faq" },
   { name: "Contact Us", path: "contact" },
 ];
+
+const handleScroll = () => {
+  const scrollPosition = window.scrollY + 150; // Increased offset
+
+  let foundSection = "home"; // Default section
+
+  for (let item of navItems) {
+    const section = document.getElementById(item.path);
+    if (section) {
+      const { offsetTop, offsetHeight } = section;
+      if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+        foundSection = item.path;
+        break;
+      }
+    }
+  }
+  setActiveSection(foundSection);
+};
+
 
 const LaptopNavbar = ({ activeSection }) => (
   <div className="hidden md:flex space-x-8">
@@ -34,8 +54,9 @@ const LaptopNavbar = ({ activeSection }) => (
         smooth={true}
         duration={800}
         offset={-50}
-        className={`uppercase cursor-pointer transition ${activeSection === item.path ? "text-red-700 font-bold" : "hover:text-red-700"
-          }`}
+        className={`uppercase cursor-pointer transition ${
+          activeSection === item.path ? "text-red-700 font-bold" : "text-white hover:text-red-700"
+        }`}
       >
         {item.name}
       </ScrollLink>
@@ -46,7 +67,7 @@ const LaptopNavbar = ({ activeSection }) => (
 const MobileNavbar = ({ menuOpen, setMenuOpen, activeSection }) => (
   <>
     <div className="md:hidden cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
-      {menuOpen ? <X size={28} /> : <Menu size={28} />}
+      {menuOpen ? <X size={28} className="text-white" /> : <Menu size={28} className="text-white" />}
     </div>
     {menuOpen && (
       <div className="md:hidden absolute top-full left-0 w-screen bg-black bg-opacity-90 py-4 flex flex-col space-y-4 items-center">
@@ -57,8 +78,9 @@ const MobileNavbar = ({ menuOpen, setMenuOpen, activeSection }) => (
             smooth={true}
             duration={800}
             offset={-50}
-            className={`uppercase text-white transition ${activeSection === item.path ? "text-red-700 font-bold" : "hover:text-red-700"
-              }`}
+            className={`uppercase text-white transition ${
+              activeSection === item.path ? "text-red-700 font-bold" : "text-white hover:text-red-700"
+            }`}
             onClick={() => setMenuOpen(false)}
           >
             {item.name}
@@ -68,6 +90,7 @@ const MobileNavbar = ({ menuOpen, setMenuOpen, activeSection }) => (
     )}
   </>
 );
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
