@@ -87,7 +87,7 @@ const Mobile = () => {
         >
             <motion.h1
                 ref={ref}
-                className="text-3xl font-normal squid-font text-black mb-6"
+                className="text-2xl font-normal squid-font text-black mb-1"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -95,7 +95,7 @@ const Mobile = () => {
                 EvEnt wilL stArT In
             </motion.h1>
             <motion.div
-                className="h-1 w-24 bg-red-500 mx-auto mb-8"
+                className="h-1 w-64 bg-red-500 mx-auto mb-8"
                 initial={{ scaleX: 0 }}
                 animate={isInView ? { scaleX: 1 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}

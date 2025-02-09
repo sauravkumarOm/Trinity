@@ -53,11 +53,11 @@ const Mobile = () => {
       <h1 className="text-black text-4xl font-extrabold mb-12 tracking-wider squid-font">
         trAcKs
       </h1>
-      <div className="grid grid-cols-1 gap-6 px-6 max-w-sm cursor-pointer">
+      <div className="grid grid-cols-2 gap-6 px-3 cursor-pointer">
         {tracks.map((track, index) => (
           <div
             key={index}
-            className="relative bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-6 shadow-lg flex flex-col items-center text-center transition-all duration-300 ease-in-out
+            className="relative bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-7 shadow-lg flex flex-col items-center text-center transition-all duration-300 ease-in-out
                   transform hover:scale-105 hover:-translate-y-1 
                   active:scale-95 active:translate-y-1 hover:bg-opacity-20 w-40 h-56"
           >
@@ -78,7 +78,7 @@ const Mobile = () => {
 
 
 const Tracks = () => {
-  const isMobile = useMediaQuery({ maxWidth: 430 });
+  const isMobile = useMediaQuery({ maxWidth: 380 });
   return isMobile ? <Mobile /> : <Laptop />;
 };
 
