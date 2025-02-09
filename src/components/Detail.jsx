@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 const details = [
   { icon: faMapMarkerAlt, text1: "Army Institute of Technology", text2: "Pune, Maharashtra" },
   { icon: faClock, text1: "Submission Deadline", text2: "23 March 2025" },
-  { icon: faDesktop, text1: "Mode of Event", text2: "Hybrid (Online & Offline)" },
+  { icon: faDesktop, text1: "Mode of Event", text2: "Online" },
   { icon: faTrophy, text1: "Prize Pool", text2: "₹1,00,000+" },
 ];
 

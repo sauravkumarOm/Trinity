@@ -87,7 +87,7 @@ const Mobile = ()=>{
   };
 
   return (
-    <div className="min-h-screen w-screen flex flex-col items-center justify-center px-6 py-16 ">
+    <div className=" w-screen flex flex-col items-center justify-center px-6 py-16 ">
       {/* Title */}
       <motion.h1
         className="text-3xl font-normal squid-font text-black mb-1"
