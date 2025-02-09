@@ -82,7 +82,7 @@ const Mobile = () => {
 
     return (
         <div
-            className="flex flex-col items-center justify-center min-h-screen w-screen py-10 bg-cover bg-center bg-no-repeat"
+            className="flex flex-col items-center justify-center mt-9 w-screen"
             
         >
             <motion.h1

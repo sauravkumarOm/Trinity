@@ -72,21 +72,21 @@ const Mobile = () => {
                 </Canvas>
             </div>
             <div className="text-center">
-                <h2 className="text-3xl font-bold text-red-500 squid-font">traIn<span className="text-white">It</span></h2>
-                <p className="mt-3 text-gray-300 mb-7 text-lg">
+                <h2 className="text-2xl font-bold text-red-500 squid-font">traIn<span className="text-white">It</span></h2>
+                <p className="mt-3 text-gray-300 mb-7 text-sm">
                     A national-level hackathon focused on AI, ML, and Data Science innovations.
                 </p>
             </div>
-            <div className="space-y-2 flex flex-col text-left text-base">
-                <h3 className="text-4xl font-normal squid-font">Quick Links</h3>
+            <div className="space-y-2 flex flex-col text-left ">
+                <h3 className="text-2xl font-normal squid-font">Quick Links</h3>
                 {['Event Rulebook', 'Sponsors Brochure', 'Event Timeline', 'FAQ', 'About Solutions 2k25', 'About AIT Pune'].map((item, index) => (
-                    <Link key={index} className="text-gray-300 text-lg hover:text-red-400 transition duration-200">{item}</Link>
+                    <Link key={index} className="text-gray-300 text-sm hover:text-red-400 transition duration-200">{item}</Link>
                 ))}
             </div>
-            <div className="space-y-4 flex flex-col justify-center mb-4">
+            <div className="space-y-4 flex flex-col justify-center mt-4 mb-4">
                 <h3 className="text-2xl font-normal squid-font">Contact Us</h3>
                 <div className="flex border-2 border-red-500 rounded-md overflow-hidden">
-                    <input type="email" placeholder="Your Email" className="p-3 w-full bg-gray-800 text-white focus:outline-none" />
+                    <input type="email" placeholder="Your Email" className="p-2 w-full bg-gray-800 text-white focus:outline-none" />
                     <button className="bg-red-500 p-3 text-white hover:bg-red-600 transition duration-300">
                         <FontAwesomeIcon icon={faTelegramPlane} className="text-2xl" />
                     </button>
@@ -94,7 +94,7 @@ const Mobile = () => {
                 <h3 className="text-2xl font-normal squid-font">Follow Us</h3>
                 <div className="flex space-x-3 justify-center">
                     {[faInstagram, faYoutube, faLinkedin].map((icon, index) => (
-                        <button key={index} className="bg-red-500 px-3 py-2 rounded-md text-2xl hover:bg-red-600 transition duration-300">
+                        <button key={index} className="bg-red-500 px-1.5 py-1 rounded-md text-2xl hover:bg-red-600 transition duration-300">
                             <FontAwesomeIcon icon={icon} />
                         </button>
                     ))}

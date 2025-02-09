@@ -160,6 +160,8 @@ const Mobile = () => {
             </Link>
           </div>
         </div>
+        <img src={SquidGame1} alt="Squid Game Left" className="absolute left-4 bottom-1 transform -translate-y-1/2 w-16" />
+        <img src={SquidGame2} alt="Squid Game Right" className="absolute right-4 bottom-1 transform -translate-y-1/2 w-16" />
       </div>
       <div id="countdown" className="" style={{ backgroundImage: `url(${bg})` }}> <EventCountDown /> </div>
       <div id="tracks" className="" style={{ backgroundImage: `url(${bg})` }}> <Tracks /> </div>

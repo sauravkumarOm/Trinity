@@ -128,7 +128,7 @@ const Laptop = () => {
 const Mobile = () => {
   return (
     <div
-      className="relative w-screen min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-center"
+      className="relative w-screen flex flex-col items-center justify-center px-6 py-16 bg-center"
       style={{ backgroundImage: `url(${bg})` }}
     >
       <motion.h1

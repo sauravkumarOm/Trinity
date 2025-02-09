@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useRef} from "react";
+import { motion, useInView } from "framer-motion";
 import bg from "../assets/grid_bg.svg";
 import impactx from "../assets/impact-x.png";
 import visionTracker from "../assets/visionarytracker.svg";
@@ -44,29 +45,42 @@ const Laptop = () => {
 }
 
 const Mobile = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
   return (
     <div
-      className=" w-screen min-h-screen flex flex-col items-center justify-center py-6 bg-cover bg-center "
-      
+      className="w-screen min-h-screen flex flex-col items-center justify-center py-6 bg-cover bg-center"
     >
       {/* Title */}
-      <h1 className="text-black text-4xl font-extrabold mb-12 tracking-wider squid-font">
-        trAcKs
-      </h1>
-      <div className="grid grid-cols-2 gap-6 px-3 cursor-pointer">
+      <motion.h1
+        ref={ref}
+        className="text-4xl font-normal squid-font text-black mb-1"
+        initial={{ opacity: 0, y: 20 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        trAck
+      </motion.h1>
+      <motion.div
+        className="h-1 w-12 bg-red-500 mx-auto mb-8"
+        initial={{ scaleX: 0 }}
+        animate={isInView ? { scaleX: 1 } : {}}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+      ></motion.div>
+      <div className="grid grid-cols-2 gap-4 px-3 cursor-pointer">
         {tracks.map((track, index) => (
           <div
             key={index}
-            className="relative bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-7 shadow-lg flex flex-col items-center text-center transition-all duration-300 ease-in-out
+            className="relative bg-white bg-opacity-10 backdrop-blur-lg rounded-2xl p-4 shadow-md flex flex-col items-center text-center transition-all duration-300 ease-in-out
                   transform hover:scale-105 hover:-translate-y-1 
-                  active:scale-95 active:translate-y-1 hover:bg-opacity-20 w-40 h-56"
+                  active:scale-95 active:translate-y-1 hover:bg-opacity-20 w-32 h-44"
           >
             <img
               src={track.image}
               alt={track.name}
-              className="w-24 h-24 mb-4 object-contain"
+              className="w-16 h-16 mb-3 object-contain"
             />
-            <h2 className="text-black text-lg font-semibold tracking-wide">
+            <h2 className="text-black text-sm font-semibold tracking-wide">
               {track.name}
             </h2>
           </div>
@@ -74,7 +88,8 @@ const Mobile = () => {
       </div>
     </div>
   );
-};
+}
+
 
 
 const Tracks = () => {

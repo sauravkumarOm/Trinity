@@ -105,7 +105,7 @@ const Mobile = ()=>{
       ></motion.div>
 
       {/* FAQ Section */}
-      <div className=" bg-red-600 text-white w-80 border border-white">
+      <div className=" bg-red-600 text-white w-72 border border-white">
         {faqs.map((faq, index) => (
           <div
             key={index}
