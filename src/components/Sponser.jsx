@@ -3,6 +3,7 @@ import { motion, useInView } from "framer-motion";
 import Unstop from "../assets/unstop.png";
 import Punekar from "../assets/punekar.png";
 import XYZ from "../assets/xyz.png";
+import Brochure from "../assets/Trainit_Brochure.pdf"
 import bg from "../assets/grid_bg.svg"
 import { useMediaQuery } from "react-responsive";
 
@@ -60,11 +61,15 @@ const Laptop = () => {
       </div>
       <div className="w-screen grid grid-cols-2 mt-14">
         <div className="flex justify-center">
-          <div className="px-9 py-4 rounded-md shadow-md bg-red-600 flex flex-col items-center text-2xl
-           text-white font-semibold cursor-pointer transition-all duration-300 ease-in-out 
-           transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1">
+          <a
+            href={Brochure}
+            download="Trainit_Brochure.pdf"
+            className="px-9 py-4 rounded-md shadow-md bg-red-600 flex flex-col items-center text-2xl
+        text-white font-semibold cursor-pointer transition-all duration-300 ease-in-out 
+        transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1"
+          >
             DOWNLOAD BROCHURE
-          </div>
+          </a>
         </div>
         <div className="flex justify-center">
           <div className="px-9 py-4 rounded-md shadow-md bg-red-600 flex flex-col items-center text-2xl
@@ -74,7 +79,7 @@ const Laptop = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
@@ -126,11 +131,14 @@ const Mobile = () => {
       </div>
       <div className="w-screen grid grid-cols-2 mt-10">
         <div className="flex justify-center">
-          <div className="px-4 py-2 rounded-md shadow-md bg-red-600 flex flex-col items-center text-xs
+          <a 
+            href={Brochure}
+            download="Trainit_Brochure.pdf"
+            className="px-4 py-2 rounded-md shadow-md bg-red-600 flex flex-col items-center text-xs
            text-white font-semibold cursor-pointer transition-all duration-300 ease-in-out 
            transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1">
             DOWNLOAD BROCHURE
-          </div>
+          </a>
         </div>
         <div className="flex justify-center">
           <div className="px-4 py-2 rounded-md shadow-md bg-red-600 flex flex-col items-center text-xs
@@ -146,8 +154,8 @@ const Mobile = () => {
 
 
 const Sponsors = () => {
-    const isMobile = useMediaQuery({maxWidth: 380});
-    return isMobile ? <Mobile/> : <Laptop/>
+  const isMobile = useMediaQuery({ maxWidth: 380 });
+  return isMobile ? <Mobile /> : <Laptop />
 };
 
 export default Sponsors;

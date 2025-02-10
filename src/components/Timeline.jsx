@@ -6,11 +6,11 @@ import rightSVG from "../assets/squid-game-soldier-mask-seeklogo.svg";
 import { useMediaQuery } from "react-responsive";
 
 const milestonesData = [
-  { title: "Registration Opens", date: "25 JAN 2025", percent: 0.05 },
+  { title: "Registration Start", date: "10 FEB 2025", percent: 0.05 },
   { title: "Registration Deadline", date: "15 MAR 2025", percent: 0.3 },
-  { title: "Submissions Begin", date: "16 MAR 2025", percent: 0.5 },
+  { title: "Submissions Begin", date: "19 MAR 2025", percent: 0.5 },
   { title: "Submissions Deadline", date: "23 MAR 2025", percent: 0.7 },
-  { title: "Final Event", date: "30 MAR 2025", percent: 0.9 },
+  { title: "Result Annoucement", date: "30 MAR 2025", percent: 0.9 },
 ];
 
 const Laptop = () => {
@@ -167,7 +167,7 @@ const Mobile = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              {index + 1}
+              {/* {index + 1} */}
             </motion.div>
             <motion.div className="text-xl font-semibold mt-4">{event.title}</motion.div>
             <motion.div className="text-gray-600 text-sm">{event.date}</motion.div>
