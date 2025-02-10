@@ -8,6 +8,10 @@
   font-weight: normal;
   font-style: normal;
 }
+body, html {
+  overflow-x: hidden;
+}
+
 
 .squid-font {
   font-family: "GameOfSquids", sans-serif;
