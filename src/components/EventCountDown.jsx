@@ -80,7 +80,7 @@ const Mobile = () => {
     const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
     const timeLeft = CountdownTimer();
 
-    const eventTitle = "Exciting Event";
+    const eventTitle = "Trainit Hackathon";
     const eventDate = "20250319T000000Z"; 
     const eventDetails = "Join us for an amazing event!";
     const location = "Online"; 

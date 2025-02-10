@@ -10,13 +10,13 @@ import { useMediaQuery } from "react-responsive";
 const tracks = [
   { name: "IMPACT-X", image: impactx },
   { name: "OUTLIER QUEST", image: outliner },
-  { name: "VISIONARY TRACKER", image: visionTracker },
+  { name: "VISION", image: visionTracker },
   { name: "PIXEL PLAY", image: console },
 ];
 
 const Laptop = () => {
   return (
-    <div className="relative w-screen min-h-screen flex flex-col items-center justify-center py-12 bg-cover bg-center bg-no-repeat tracks-bg">
+    <div className="relative w-screen min-h-screen flex flex-col items-center justify-center py-12 bg-cover bg-center bg-no-repeat brightness-90 tracks-bg">
       {/* Title */}
       <h1 className="text-white text-6xl font-extrabold mb-44 tracking-wider squid-font">
         trAcKs

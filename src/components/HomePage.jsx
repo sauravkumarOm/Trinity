@@ -148,7 +148,7 @@ const Laptop = () => {
 
       {/* Hero Section */}
       <div className="relative w-screen min-h-screen">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 ">"
           <img src={Img1} alt="Homepage" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
@@ -163,8 +163,15 @@ const Laptop = () => {
           {/* Register Button */}
           <div className="flex justify-center pt-6">
             <Link to="https://unstop.com/hackathons/trainit-where-data-meets-creativity-solutions-2k25-army-institute-of-technology-ait-pune-1390420?lb=iZtcfNU1&utm_medium=Share&utm_source=shortUrl">
-              <button className="relative bg-gradient-to-b from-red-500 to-red-700 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg text-base md:text-lg font-bold transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1 shadow-lg shadow-red-900 border-b-[4px] md:border-b-[5px] border-red-800">
+              <button className="button_Register">
                 REGISTER NOW
+                <svg className="icon_Register" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
               </button>
             </Link>
           </div>
@@ -214,6 +221,7 @@ const Laptop = () => {
     </div>
   );
 };
+
 
 const Mobile = () => {
   return (
