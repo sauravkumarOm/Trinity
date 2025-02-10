@@ -80,11 +80,23 @@ const Mobile = () => {
     const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
     const timeLeft = CountdownTimer();
 
+    const eventTitle = "Exciting Event";
+    const eventDate = "20250319T000000Z"; 
+    const eventDetails = "Join us for an amazing event!";
+    const location = "Online"; 
+
+    const handleAddToCalendar = () => {
+        const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
+            eventTitle
+        )}&dates=${eventDate}/${eventDate}&details=${encodeURIComponent(
+            eventDetails
+        )}&location=${encodeURIComponent(location)}`;
+
+        window.open(googleCalendarUrl, "_blank");
+    };
+
     return (
-        <div
-            className="flex flex-col items-center justify-center mt-9 w-screen"
-            
-        >
+        <div className="flex flex-col items-center justify-center mt-9 w-screen mb-14">
             <motion.h1
                 ref={ref}
                 className="text-2xl font-normal squid-font text-black mb-1"
@@ -100,23 +112,30 @@ const Mobile = () => {
                 animate={isInView ? { scaleX: 1 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             ></motion.div>
-            <div className="grid grid-cols-2 gap-4 mt-6 mb-6">
+
+            <div className="flex gap-2 mt-6 mb-6">
                 {Object.entries(timeLeft).map(([unit, value]) => (
                     <div
                         key={unit}
-                        className="flex flex-col items-center bg-white p-4 shadow-md rounded-lg border border-gray-200"
+                        className="flex flex-col items-center bg-white p-2.5 shadow-md rounded-lg border border-gray-200"
                     >
                         <span className="text-4xl font-bold text-black">{value}</span>
                         <span className="text-xs uppercase font-medium text-gray-600">{unit}</span>
                     </div>
                 ))}
             </div>
-            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-5 rounded-lg shadow-md text-md transition-all uppercase">
+
+            <button
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-5 rounded-lg shadow-md text-md transition-all uppercase"
+                onClick={handleAddToCalendar}
+            >
                 MARK YOUR CALENDAR
             </button>
         </div>
     );
 };
+
+
 
 const Countdown = () => {
     const isMobile = useMediaQuery({ maxWidth: 430 });

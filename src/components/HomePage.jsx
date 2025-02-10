@@ -11,16 +11,17 @@ import EventCountDown from "./EventCountDown";
 import Tracks from "./Track";
 import Timeline from "./Timeline";
 import Detail from "./Detail";
-import Sponsors from "./Sponser";
+import Sponsors from "./Sponsor";
 import FAQSection from "./FAQ";
 import Footer from "./Footer";
 import bg from "../assets/grid_bg.svg";
+import img2 from "../assets/squidgame3.jpg"
 
 const navItems = [
   { name: "Home", path: "home" },
   { name: "Tracks", path: "tracks" },
   { name: "Timeline", path: "timeline" },
-  { name: "Detail", path: "detail" },
+  { name: "Details", path: "detail" },
   { name: "Sponsors", path: "sponsors" },
   { name: "FAQ", path: "faq" },
   { name: "Contact Us", path: "contact" },
@@ -192,7 +193,7 @@ const Laptop = () => {
       <section id="countdown" className="bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }}>
         <EventCountDown />
       </section>
-      <section id="tracks" className="bg-cover bg-center" style={{ backgroundImage: `url(${bg})` }}>
+      <section id="tracks" className="bg-cover bg-center" style={{ backgroundImage: `url(${img2})` }}>
         <Tracks />
       </section>
       <section id="timeline">
@@ -239,7 +240,7 @@ const Mobile = () => {
         <img src={SquidGame2} alt="Squid Game Right" className="absolute right-4 bottom-1 transform -translate-y-1/2 w-16" />
       </div>
       <div id="countdown" className="" style={{ backgroundImage: `url(${bg})` }}> <EventCountDown /> </div>
-      <div id="tracks" className="" style={{ backgroundImage: `url(${bg})` }}> <Tracks /> </div>
+      <div id="tracks" className="" > <Tracks /> </div>
       <div id="timeline" className=""> <Timeline /> </div>
       <div id="detail" className=""> <Detail /> </div>
       <div id="sponsors" className="" style={{ backgroundImage: `url(${bg})` }}> <Sponsors /> </div>

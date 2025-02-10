@@ -1,6 +1,6 @@
 import React, {useRef} from "react";
 import { motion, useInView } from "framer-motion";
-import bg from "../assets/grid_bg.svg";
+import bg2 from "../assets/squidgame3.jpg"
 import impactx from "../assets/impact-x.png";
 import visionTracker from "../assets/visionarytracker.svg";
 import outliner from "../assets/outlierquest.svg"
@@ -49,12 +49,12 @@ const Mobile = () => {
   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
   return (
     <div
-      className="w-screen min-h-screen flex flex-col items-center justify-center py-6 bg-cover bg-center"
+      className="w-screen min-h-screen flex flex-col items-center justify-center py-6 bg-cover bg-center tracks-bg"
     >
       {/* Title */}
       <motion.h1
         ref={ref}
-        className="text-4xl font-normal squid-font text-black mb-1"
+        className="text-4xl font-normal squid-font text-white mb-1"
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: "easeOut" }}
