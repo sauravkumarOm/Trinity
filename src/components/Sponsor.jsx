@@ -110,13 +110,6 @@ const Mobile = () => {
           <motion.div
             key={index}
             className="relative bg-red-600 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg p-6 flex flex-col items-center cursor-pointer transition-transform duration-500 ease-out transform-gpu border border-white/20"
-            whileHover={{
-              rotateX: 10,
-              rotateY: 15,
-              scale: 1.05,
-              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.4)",
-              transition: { duration: 0.3 },
-            }}
           >
             <div className="absolute -top-4 bg-white text-red-600 border-4 border-red-600 font-bold px-2 py-1 rounded-md shadow-md text-sm">
               {sponsor.title}

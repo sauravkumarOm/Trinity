@@ -148,13 +148,14 @@ const Laptop = () => {
 
       {/* Hero Section */}
       <div className="relative w-screen min-h-screen">
-        <div className="absolute inset-0 ">"
+        <div className="absolute inset-0 ">
+          <div className="bg-black w-screen"></div>
           <img src={Img1} alt="Homepage" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+
         </div>
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <h1 className="text-5xl md:text-[180px] font-normal squid-font trainit-text text-red-500">
+          <h1 className="text-5xl md:text-[180px] font-normal squid-font trainit-text">
             trAInIt
           </h1>
           <h2 className="text-2xl md:text-[60px] font-bold text-white mt-7">HACKATHON</h2>
@@ -183,18 +184,18 @@ const Laptop = () => {
 
       {/* Scroll to Top Button - Only show when `showButton` is true */}
       {showButton && (
-       <button
-       className="fixed bottom-5 right-5 button z-50"
-       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-     >
-       <svg className="w-6 h-6 svgIcon" viewBox="0 0 384 512">
-         <path
-           fill="currentColor"
-           d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-         />
-       </svg>
-     </button>
-     
+        <button
+          className="fixed bottom-5 right-5 button z-50"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <svg className="w-6 h-6 svgIcon" viewBox="0 0 384 512">
+            <path
+              fill="currentColor"
+              d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+            />
+          </svg>
+        </button>
+
 
 
       )}
