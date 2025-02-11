@@ -109,7 +109,7 @@ const Mobile = () => {
         {sponsors.map((sponsor, index) => (
           <motion.div
             key={index}
-            className="relative bg-red-600 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg p-6 flex flex-col items-center cursor-pointer transition-transform duration-500 ease-out transform-gpu border border-white/20"
+            className="relative bg-red-600 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg p-6 flex flex-col items-center cursor-pointer border border-white/20"
           >
             <div className="absolute -top-4 bg-white text-red-600 border-4 border-red-600 font-bold px-2 py-1 rounded-md shadow-md text-sm">
               {sponsor.title}

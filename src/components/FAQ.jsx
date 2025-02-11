@@ -4,10 +4,12 @@ import bg from "../assets/grid_bg.svg";
 import { useMediaQuery } from "react-responsive";
 
 const faqs = [
-  { question: "Who is eligible to participate in the TRAINIT Hackathon?", answer: "Anyone with a passion for technology and innovation can participate." },
-  { question: "Will there be any mentors available during the hackathon?", answer: "Yes, experienced mentors will be available to guide participants." },
-  { question: "Will there be prizes for the winners of the hackathon?", answer: "Yes, exciting prizes will be awarded to top-performing teams." },
-  { question: "How can we register for the TRAINIT Hackathon?", answer: "You can register through our official website or event page." },
+  { question: "What is a TRAINIT hackathon??", answer: "TRAINIT hackathon is a virtual competition designed to inspire innovation in AI, ML and data science. This online hackathon challenges participants to solve real world problems." },
+  { question: "Who can participate in TRAINIT hackathon?", answer: "Open to all engineering students across the country." },
+  { question: "Is there a participation fee?", answer: "No registration fees for participation." },
+  { question: "Where will the hackathon take place?", answer: "The event will be conducted online via unstop." },
+  { question: "What is the prize poll of TRAINIT hackathon?", answer: "The prize poll of TRAINIT hackathon exceeds 1 lakh INR." },
+  { question: "How will the solutions be judged?", answer: "The solution will be judged on originality and innovation, technical implementation,  relevance and impact." },
 ];
 
 const Laptop = ()=>{
