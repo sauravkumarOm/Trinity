@@ -99,7 +99,7 @@ body, html {
 .button:hover {
   width: 140px;
   border-radius: 50px;
-  background-color: rgb(181, 160, 255);
+  background-color: #ED184B;
   justify-content: center;
 }
 
