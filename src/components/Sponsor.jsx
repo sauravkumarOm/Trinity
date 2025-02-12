@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Unstop from "../assets/unstop.png";
+import Unstop from "../assets/Group.png";
 import Punekar from "../assets/punekar.png";
 import XYZ from "../assets/xyz.png";
 import Brochure from "../assets/Trainit_Brochure.pdf"
@@ -54,8 +54,10 @@ const Laptop = () => {
             <img
               src={sponsor.logo}
               alt={sponsor.title}
-              className="h-24 mt-10 rounded-lg shadow-md bg-white"
+              className={`h-24 mt-10 rounded-lg shadow-md ${sponsor.title === "DIGITAL MEDIA PARTNER" ? "bg-white" : "bg-[#ED184B]"
+                }`}
             />
+
           </motion.div>
         ))}
       </div>
@@ -73,10 +75,10 @@ const Laptop = () => {
         </div>
         <div className="flex justify-center">
           <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=trinity@aitpune.edu.in"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-9 py-4 rounded-md shadow-md bg-[#ED184B] flex flex-col items-center text-2xl
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=trinity@aitpune.edu.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-9 py-4 rounded-md shadow-md bg-[#ED184B] flex flex-col items-center text-2xl
           text-white font-semibold cursor-pointer transition-all duration-300 ease-in-out
           transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1">
             BECOME A SPONSOR
@@ -121,14 +123,15 @@ const Mobile = () => {
             <img
               src={sponsor.logo}
               alt={sponsor.title}
-              className="h-16 mt-8 rounded-lg shadow-md bg-white"
+              className={`h-24 mt-10 rounded-lg shadow-md ${sponsor.title === "DIGITAL MEDIA PARTNER" ? "bg-white" : "bg-[#ED184B]"
+                }`}
             />
           </motion.div>
         ))}
       </div>
       <div className="w-screen grid grid-cols-2 mt-10">
         <div className="flex justify-center">
-          <a 
+          <a
             href={Brochure}
             download="Trainit_Brochure.pdf"
             className="px-4 py-2 rounded-md shadow-md bg-[#ED184B] flex flex-col items-center text-xs

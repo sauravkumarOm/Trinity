@@ -10,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 const tracks = [
   { name: "IMPACT-X", image: impactx },
   { name: "OUTLIER QUEST", image: outliner },
-  { name: "VISION", image: visionTracker },
+  { name: "VISION TRACKER", image: visionTracker },
   { name: "PIXEL PLAY", image: console },
 ];
 
