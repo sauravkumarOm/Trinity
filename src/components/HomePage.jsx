@@ -163,7 +163,8 @@ const Laptop = () => {
 
           {/* Register Button */}
           <div className="flex justify-center pt-6">
-            <Link to="https://unstop.com/hackathons/trainit-where-data-meets-creativity-solutions-2k25-army-institute-of-technology-ait-pune-1390420?lb=iZtcfNU1&utm_medium=Share&utm_source=shortUrl">
+            <a href="https://unstop.com/hackathons/trainit-where-data-meets-creativity-solutions-2k25-army-institute-of-technology-ait-pune-1390420?lb=iZtcfNU1&utm_medium=Share&utm_source=shortUrl"
+               target="_blank" >
               <button className="button_Register">
                 REGISTER NOW
                 <svg className="icon_Register" viewBox="0 0 24 24" fill="currentColor">
@@ -174,7 +175,7 @@ const Laptop = () => {
                   ></path>
                 </svg>
               </button>
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -242,11 +243,12 @@ const Mobile = () => {
           <h2 className="text-2xl md:text-[60px] font-bold text-white mt-7">HACKATHON</h2>
           <p className="text-lg md:text-2xl text-gray-300 mt-4">19-23 MARCH 2025</p>
           <div className="flex justify-center pt-6 ">
-            <Link to="https://unstop.com/hackathons/trainit-where-data-meets-creativity-solutions-2k25-army-institute-of-technology-ait-pune-1390420?lb=iZtcfNU1&utm_medium=Share&utm_source=shortUrl">
+            <a href="https://unstop.com/hackathons/trainit-where-data-meets-creativity-solutions-2k25-army-institute-of-technology-ait-pune-1390420?lb=iZtcfNU1&utm_medium=Share&utm_source=shortUrl"
+             target="_blank">
               <button className="relative bg-gradient-to-b from-[#ED184B] to-red-700 text-white px-6 md:px-8 py-2 rounded-lg text-base font-bold transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1 shadow-lg shadow-red-900  md:border-b-[5px] border-red-800">
                 REGISTER NOW
               </button>
-            </Link>
+            </a>
           </div>
         </div>
         <img src={SquidGame1} alt="Squid Game Left" className="absolute left-4 bottom-1 transform -translate-y-1/2 w-16" />
