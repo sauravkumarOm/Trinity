@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import Countdown from './components/EventCountDown';
-import Loader from './components/Loader/Loader'; 
+import Loader from './components/Loader/Loader';
+import Scrollbar from './components/ScrollBar/ScrollBar';
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Show the loader for 10 seconds
     const timer = setTimeout(() => {
       setLoading(false);
     }, 3000);
@@ -18,8 +18,9 @@ function App() {
 
   return (
     <>
+      <Scrollbar /> {/* Add Scrollbar globally */}
       {loading ? (
-        <Loader /> // Display loader while loading is true
+        <Loader />
       ) : (
         <Router>
           <Routes>

@@ -52,7 +52,7 @@ const Laptop = () => {
                 EvEnt wilL stArT In
             </motion.h1>
             <motion.div
-                className="h-1 w-32 bg-red-500 mx-auto mb-12"
+                className="h-1 w-32 bg-[#ED184B] mx-auto mb-12"
                 initial={{ scaleX: 0 }}
                 animate={isInView ? { scaleX: 1 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -68,7 +68,7 @@ const Laptop = () => {
                     </div>
                 ))}
             </div>
-            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg transition-all uppercase">
+            <button className="bg-[#ED184B] hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-lg text-lg transition-all uppercase">
                 MARK YOUR CALENDAR
             </button>
         </div>
@@ -107,7 +107,7 @@ const Mobile = () => {
                 EvEnt wilL stArT In
             </motion.h1>
             <motion.div
-                className="h-1 w-64 bg-red-500 mx-auto mb-8"
+                className="h-1 w-64 bg-[#ED184B] mx-auto mb-8"
                 initial={{ scaleX: 0 }}
                 animate={isInView ? { scaleX: 1 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -126,7 +126,7 @@ const Mobile = () => {
             </div>
 
             <button
-                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-5 rounded-lg shadow-md text-md transition-all uppercase"
+                className="bg-[#ED184B] hover:bg-red-700 text-white font-bold py-2 px-5 rounded-lg shadow-md text-md transition-all uppercase"
                 onClick={handleAddToCalendar}
             >
                 MARK YOUR CALENDAR

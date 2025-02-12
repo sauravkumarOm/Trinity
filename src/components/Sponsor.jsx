@@ -29,7 +29,7 @@ const Laptop = () => {
         Our SpOnSOrS
       </motion.h1>
       <motion.div
-        className="h-1 w-32 bg-red-500 mx-auto mb-12"
+        className="h-1 w-32 bg-[#ED184B] mx-auto mb-12"
         initial={{ scaleX: 0 }}
         animate={isInView ? { scaleX: 1 } : {}}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -39,7 +39,7 @@ const Laptop = () => {
         {sponsors.map((sponsor, index) => (
           <motion.div
             key={index}
-            className="relative bg-red-600 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-xl p-8 flex flex-col items-center cursor-pointer transition-transform duration-500 ease-out transform-gpu border border-white/20"
+            className="relative bg-[#ED184B] bg-opacity-90 backdrop-blur-lg rounded-xl shadow-xl p-8 flex flex-col items-center cursor-pointer transition-transform duration-500 ease-out transform-gpu border border-white/20"
             whileHover={{
               rotateX: 15,
               rotateY: 20,
@@ -64,7 +64,7 @@ const Laptop = () => {
           <a
             href={Brochure}
             download="Trainit_Brochure.pdf"
-            className="px-9 py-4 rounded-md shadow-md bg-red-600 flex flex-col items-center text-2xl
+            className="px-9 py-4 rounded-md shadow-md bg-[#ED184B] flex flex-col items-center text-2xl
         text-white font-semibold cursor-pointer transition-all duration-300 ease-in-out 
         transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1"
           >
@@ -72,11 +72,15 @@ const Laptop = () => {
           </a>
         </div>
         <div className="flex justify-center">
-          <div className="px-9 py-4 rounded-md shadow-md bg-red-600 flex flex-col items-center text-2xl
+          <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=trinity@aitpune.edu.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-9 py-4 rounded-md shadow-md bg-[#ED184B] flex flex-col items-center text-2xl
           text-white font-semibold cursor-pointer transition-all duration-300 ease-in-out
           transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1">
             BECOME A SPONSOR
-          </div>
+          </a>
         </div>
       </div>
     </div >
@@ -99,7 +103,7 @@ const Mobile = () => {
         Our SpOnSOrS
       </motion.h1>
       <motion.div
-        className="h-1 w-64 bg-red-500 mx-auto mb-12"
+        className="h-1 w-64 bg-[#ED184B] mx-auto mb-12"
         initial={{ scaleX: 0 }}
         animate={isInView ? { scaleX: 1 } : {}}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -109,7 +113,7 @@ const Mobile = () => {
         {sponsors.map((sponsor, index) => (
           <motion.div
             key={index}
-            className="relative bg-red-600 bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg p-6 flex flex-col items-center cursor-pointer border border-white/20"
+            className="relative bg-[#ED184B] bg-opacity-90 backdrop-blur-lg rounded-xl shadow-lg p-6 flex flex-col items-center cursor-pointer border border-white/20"
           >
             <div className="absolute -top-4 bg-white text-red-600 border-4 border-red-600 font-bold px-2 py-1 rounded-md shadow-md text-sm">
               {sponsor.title}
@@ -127,14 +131,14 @@ const Mobile = () => {
           <a 
             href={Brochure}
             download="Trainit_Brochure.pdf"
-            className="px-4 py-2 rounded-md shadow-md bg-red-600 flex flex-col items-center text-xs
+            className="px-4 py-2 rounded-md shadow-md bg-[#ED184B] flex flex-col items-center text-xs
            text-white font-semibold cursor-pointer transition-all duration-300 ease-in-out 
            transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1">
             DOWNLOAD BROCHURE
           </a>
         </div>
         <div className="flex justify-center">
-          <div className="px-4 py-2 rounded-md shadow-md bg-red-600 flex flex-col items-center text-xs
+          <div className="px-4 py-2 rounded-md shadow-md bg-[#ED184B] flex flex-col items-center text-xs
           text-white font-semibold cursor-pointer transition-all duration-300 ease-in-out
           transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1">
             BECOME A SPONSOR

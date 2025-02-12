@@ -38,7 +38,7 @@ const Laptop = ()=>{
       ></motion.div>
 
       {/* FAQ Section */}
-      <div className="max-w-4xl bg-red-600 text-white w-full border border-white">
+      <div className="max-w-4xl bg-[#ED184B] text-white w-full border border-white">
         {faqs.map((faq, index) => (
           <div
             key={index}
@@ -107,7 +107,7 @@ const Mobile = ()=>{
       ></motion.div>
 
       {/* FAQ Section */}
-      <div className=" bg-red-600 text-white w-72 border border-white">
+      <div className=" bg-[#ED184B] text-white w-72 border border-white">
         {faqs.map((faq, index) => (
           <div
             key={index}

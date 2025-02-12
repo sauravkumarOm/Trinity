@@ -12,7 +12,7 @@ const details = [
 
 const Laptop = () => {
   return (
-    <div className="w-screen min-h-64 bg-red-700 mt-1 flex items-center justify-center">
+    <div className="w-screen min-h-64 bg-[#ED184B] mt-1 flex items-center justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full px-8 text-center">
         {details.map((item, index) => (
           <div key={index} className="flex flex-col items-center gap-2 p-4">
@@ -28,7 +28,7 @@ const Laptop = () => {
 
 const Mobile = ()=>{
   return (
-    <div className="w-screen bg-red-700 mt-1 flex items-center justify-center">
+    <div className="w-screen bg-[#ED184B] mt-1 flex items-center justify-center">
     <div className="flex flex-col gap-1 w-full text-center">
       {details.map((item, index) => (
         <div key={index} className="flex flex-col items-center p-4">

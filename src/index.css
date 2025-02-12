@@ -19,15 +19,17 @@ body, html {
 
 .trainit-text {
   position: relative;
-  color: red;
+  color: #ED184B;
   display: inline-block;
   font-weight: bold;
-  /* text-transform: uppercase; */
   letter-spacing: 2px;
-  font-size: 5rem; /* Adjust size as needed */
+  font-size: 12rem; 
 }
-
-/* White overlay text with glitchy movement */
+@media (max-width: 380px) {
+  .trainit-text {
+    font-size: 4.3rem;
+  }
+}
 .trainit-text::before {
   content: "TRAINIT";
   position: absolute;
@@ -43,8 +45,6 @@ body, html {
   );
   animation: glitchWave 3s ease-in-out infinite;
 }
-
-/* Glitch Wave Animation */
 @keyframes glitchWave {
   0%, 100% {
     clip-path: polygon(
@@ -52,8 +52,6 @@ body, html {
       70% 40%, 85% 45%, 100% 60%, 
       100% 100%, 0% 100%
     );
-    /* transform: translateX(-3px); */
-    /* opacity: 0.9; */
   }
    50% {
     clip-path: polygon(
@@ -61,8 +59,6 @@ body, html {
       70% 55%, 85% 50%, 100% 45%, 
       100% 100%, 0% 100%
     );
-    /* transform: translateX(1px); */
-    /* opacity: 1; */
   }
 }
 
@@ -136,7 +132,7 @@ body, html {
   padding-block: 0.5rem;
   padding-inline: 1.25rem;
   background-color: #ED184B;
-  border-radius: 9999px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,6 +144,7 @@ body, html {
   overflow: hidden;
   font-size: 15px;
   cursor: pointer;
+  
 }
 
 .icon_Register {

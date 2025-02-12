@@ -24,7 +24,7 @@ const Laptop = () => {
                     </Canvas>
                 </div>
                 <div className="text-center md:text-left flex flex-col justify-center">
-                    <h2 className="text-4xl font-bold text-red-500 flex items-center squid-font">
+                    <h2 className="text-4xl font-bold text-[#ED184B] flex items-center squid-font">
                         traIn<span className="text-white">It</span>
                     </h2>
                     <p className="mt-3 text-gray-300 text-lg leading-relaxed">
@@ -46,7 +46,7 @@ const Laptop = () => {
                                 key={index}
                                 to={item.link}
                                 target={item.link.startsWith('http') ? '_blank' : '_self'}
-                                className="text-gray-300 text-lg hover:text-red-400 transition duration-200"
+                                className="text-gray-300 text-lg hover:text-[#ED184B] transition duration-200"
                             >
                                 {item.name}
                             </Link>
@@ -54,7 +54,7 @@ const Laptop = () => {
                             <button
                                 key={index}
                                 onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })}
-                                className="text-gray-300 text-lg hover:text-red-400 transition duration-200 text-left"
+                                className="text-gray-300 text-lg hover:text-[#ED184B] transition duration-200 text-left"
                             >
                                 {item.name}
                             </button>
@@ -64,9 +64,9 @@ const Laptop = () => {
 
                 <div className="space-y-4 flex flex-col justify-center">
                     <h3 className="text-2xl font-normal squid-font">Contact Us</h3>
-                    <div className="flex border-2 border-red-500 rounded-md overflow-hidden">
+                    <div className="flex border-2 border-[#ED184B] rounded-md overflow-hidden">
                         <input type="email" placeholder="Your Email" className="p-3 w-full bg-gray-800 text-white focus:outline-none" />
-                        <button className="bg-red-500 p-3 text-white hover:bg-red-600 transition duration-300">
+                        <button className="bg-[#ED184B] p-3 text-white hover:bg-red-600 transition duration-300">
                             <FontAwesomeIcon icon={faTelegramPlane} className="text-2xl" />
                         </button>
                     </div>
@@ -78,7 +78,7 @@ const Laptop = () => {
                             { icon: faLinkedin, link: "https://www.linkedin.com/company/trinityaiclub/" }
                         ].map((item, index) => (
                             <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
-                                <button className="bg-red-500/80 backdrop-blur-lg px-4 py-3 rounded-lg text-2xl text-white shadow-lg 
+                                <button className="bg-[#ED184B] backdrop-blur-lg px-4 py-3 rounded-lg text-2xl text-white shadow-lg 
                     hover:bg-red-600 hover:scale-110 hover:rotate-3 hover:shadow-xl 
                     active:scale-95 active:shadow-md transition-all duration-300 ease-in-out">
                                     <FontAwesomeIcon icon={item.icon} />
@@ -89,7 +89,7 @@ const Laptop = () => {
                 </div>
 
                 <div className="col-span-4 text-center text-gray-400 text-sm border-t border-gray-700 pt-4">
-                    Made With 🤖 By <span className="text-red-500">Trinity Club</span>
+                    Made With 🤖 By <span className="text-[#ED184B]">Trinity Club</span>
                 </div>
             </footer>
         </>
@@ -109,7 +109,7 @@ const Mobile = () => {
                 </Canvas>
             </div>
             <div className="text-center">
-                <h2 className="text-2xl font-bold text-red-500 squid-font">traIn<span className="text-white">It</span></h2>
+                <h2 className="text-2xl font-bold text-[#ED184B] squid-font">traIn<span className="text-white">It</span></h2>
                 <p className="mt-3 text-gray-300 mb-7 text-sm">
                     A national-level hackathon focused on AI, ML, and Data Science innovations.
                 </p>
@@ -129,7 +129,7 @@ const Mobile = () => {
                             key={index}
                             to={item.link}
                             target={item.link.startsWith('http') ? '_blank' : '_self'}
-                            className="text-gray-300 text-sm hover:text-red-400 transition duration-200"
+                            className="text-gray-300 text-sm hover:text-[#ED184B] transition duration-200"
                         >
                             {item.name}
                         </Link>
@@ -137,7 +137,7 @@ const Mobile = () => {
                         <button
                             key={index}
                             onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })}
-                            className="text-gray-300 text-sm hover:text-red-400 transition duration-200 text-left"
+                            className="text-gray-300 text-sm hover:text-[#ED184B] transition duration-200 text-left"
                         >
                             {item.name}
                         </button>
@@ -149,7 +149,7 @@ const Mobile = () => {
                 <h3 className="text-2xl font-normal squid-font">Contact Us</h3>
                 <div className="flex border-2 border-red-500 rounded-md overflow-hidden">
                     <input type="email" placeholder="Your Email" className="p-2 w-full bg-gray-800 text-white focus:outline-none" />
-                    <button className="bg-red-500 p-3 text-white hover:bg-red-600 transition duration-300">
+                    <button className="bg-red-500 p-3 text-white hover:bg-[#ED184B] transition duration-300">
                         <FontAwesomeIcon icon={faTelegramPlane} className="text-2xl" />
                     </button>
                 </div>
@@ -161,7 +161,7 @@ const Mobile = () => {
                         { icon: faLinkedin, link: "https://www.linkedin.com/company/trinityaiclub/" }
                     ].map((item, index) => (
                         <a key={index} href={item.link} target="_blank" rel="noopener noreferrer">
-                            <button className="bg-red-500 px-1.5 py-1 rounded-md text-2xl hover:bg-red-600 transition duration-300">
+                            <button className="bg-[#ED184B] px-1.5 py-1 rounded-md text-2xl hover:bg-red-600 transition duration-300">
                                 <FontAwesomeIcon icon={item.icon} />
                             </button>
                         </a>
@@ -169,7 +169,7 @@ const Mobile = () => {
                 </div>
             </div>
             <div className="col-span-4 text-center text-gray-400 text-sm border-t w-screen border-gray-700 pt-4">
-                Made With 🤖 By <span className="text-red-500">Trinity Club</span>
+                Made With 🤖 By <span className="text-[#ED184B]">Trinity Club</span>
             </div>
         </footer>
     );

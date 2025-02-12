@@ -55,7 +55,7 @@ const LaptopNavbar = ({ activeSection }) => (
         smooth={true}
         duration={800}
         offset={-50}
-        className={`uppercase cursor-pointer transition ${activeSection === item.path ? "text-red-700 font-bold" : "text-white hover:text-red-700"
+        className={`uppercase cursor-pointer transition ${activeSection === item.path ? "text-[#ED184B] font-bold" : "text-white hover:text-[#ED184B]"
           }`}
       >
         {item.name}
@@ -117,7 +117,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img src={Logo} alt="Logo" className="h-10 w-auto" />
-          <h1 className="text-2xl font-normal squid-font ml-4 text-red-600">trInIty</h1>
+          <h1 className="text-2xl font-normal squid-font ml-4 text-[#ED184B]">trInIty</h1>
         </div>
         <LaptopNavbar activeSection={activeSection} />
         <MobileNavbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} activeSection={activeSection} />
@@ -155,11 +155,11 @@ const Laptop = () => {
         </div>
 
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-          <h1 className="text-5xl md:text-[180px] font-normal squid-font trainit-text">
+          <h1 className=" font-normal squid-font trainit-text">
             trAInIt
           </h1>
-          <h2 className="text-2xl md:text-[60px] font-bold text-white mt-7">HACKATHON</h2>
-          <p className="text-lg md:text-2xl text-gray-300 mt-4">19-23 MARCH 2025</p>
+          <h2 className="text-[4.8rem] font-bold text-white mt-7">HACKATHON</h2>
+          <p className="text-3xl text-gray-300 mt-4">19-23 MARCH 2025</p>
 
           {/* Register Button */}
           <div className="flex justify-center pt-6">
@@ -178,8 +178,8 @@ const Laptop = () => {
           </div>
         </div>
 
-        <img src={SquidGame1} alt="Squid Game Left" className="absolute left-4 bottom-4 w-52" />
-        <img src={SquidGame2} alt="Squid Game Right" className="absolute right-4 bottom-4 w-52" />
+        <img src={SquidGame1} alt="Squid Game Left" className="absolute left-4 bottom-4 w-64" />
+        <img src={SquidGame2} alt="Squid Game Right" className="absolute right-4 bottom-4 w-64" />
       </div>
 
       {/* Scroll to Top Button - Only show when `showButton` is true */}
@@ -238,12 +238,12 @@ const Mobile = () => {
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         </div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 className="text-5xl md:text-[180px] font-normal squid-font trainit-text text-red-500">trAInIt</h1>
+          <h1 className="text-5xl md:text-[180px] font-normal squid-font trainit-text text-[#ED184B]">trAInIt</h1>
           <h2 className="text-2xl md:text-[60px] font-bold text-white mt-7">HACKATHON</h2>
           <p className="text-lg md:text-2xl text-gray-300 mt-4">19-23 MARCH 2025</p>
           <div className="flex justify-center pt-6 ">
             <Link to="https://unstop.com/hackathons/trainit-where-data-meets-creativity-solutions-2k25-army-institute-of-technology-ait-pune-1390420?lb=iZtcfNU1&utm_medium=Share&utm_source=shortUrl">
-              <button className="relative bg-gradient-to-b from-red-500 to-red-700 text-white px-6 md:px-8 py-2 rounded-lg text-base font-bold transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1 shadow-lg shadow-red-900  md:border-b-[5px] border-red-800">
+              <button className="relative bg-gradient-to-b from-[#ED184B] to-red-700 text-white px-6 md:px-8 py-2 rounded-lg text-base font-bold transition-all duration-300 ease-in-out transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1 shadow-lg shadow-red-900  md:border-b-[5px] border-red-800">
                 REGISTER NOW
               </button>
             </Link>
