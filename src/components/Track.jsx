@@ -80,7 +80,7 @@ const Mobile = () => {
               alt={track.name}
               className="w-16 h-16 mb-3 object-contain"
             />
-            <h2 className="text-black text-sm font-semibold tracking-wide">
+            <h2 className="text-white text-sm font-semibold tracking-wide">
               {track.name}
             </h2>
           </div>
