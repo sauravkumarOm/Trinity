@@ -111,7 +111,7 @@ const Mobile = () => {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
       ></motion.div>
 
-      <div className="grid grid-cols-2 gap-4 mb-3 space-y-10 mx-auto px-4">
+      <div className="grid grid-cols-2 gap-4 mb-3 space-y-6 mx-auto px-4">
         {sponsors.map((sponsor, index) => (
           <motion.div
             key={index}
@@ -123,7 +123,7 @@ const Mobile = () => {
             <img
               src={sponsor.logo}
               alt={sponsor.title}
-              className={`h-24 mt-10 rounded-lg shadow-md ${sponsor.title === "DIGITAL MEDIA PARTNER" ? "bg-white" : "bg-[#ED184B]"
+              className={`h-16 mt-8  rounded-lg shadow-md ${sponsor.title === "DIGITAL MEDIA PARTNER" ? "bg-white" : "bg-[#ED184B]"
                 }`}
             />
           </motion.div>
