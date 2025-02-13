@@ -176,7 +176,7 @@ const Mobile = () => {
 };
 
 const Footer = () => {
-    const isMobile = useMediaQuery({ maxWidth: 430 });
+    const isMobile = useMediaQuery({ maxWidth: 720 });
     return isMobile ? <Mobile /> : <Laptop />;
 };
 

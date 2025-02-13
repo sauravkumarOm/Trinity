@@ -89,10 +89,10 @@ const Mobile = ()=>{
   };
 
   return (
-    <div className=" w-screen flex flex-col items-center justify-center px-6 py-16 ">
+    <div className=" w-screen flex flex-col items-center justify-center px-6 py-2 ">
       {/* Title */}
       <motion.h1
-        className="text-3xl font-normal squid-font text-black mb-1"
+        className="text-3xl font-normal squid-font text-black mb-2"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -151,7 +151,7 @@ const Mobile = ()=>{
 };
 
 const FAQSection = () => {
-  const isMobile = useMediaQuery({maxWidth : 380});
+  const isMobile = useMediaQuery({maxWidth : 720});
   return isMobile ? <Mobile/> : <Laptop/>
 };
 

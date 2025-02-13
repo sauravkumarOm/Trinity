@@ -54,7 +54,7 @@ const Mobile = () => {
       {/* Title */}
       <motion.h1
         ref={ref}
-        className="text-4xl font-normal squid-font text-white mb-1"
+        className="text-4xl font-normal squid-font text-white mb-2"
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -62,7 +62,7 @@ const Mobile = () => {
         trAck
       </motion.h1>
       <motion.div
-        className="h-1 w-12 bg-red-500 mx-auto mb-8"
+        className="h-1 w-20 bg-red-500 mx-auto mb-8"
         initial={{ scaleX: 0 }}
         animate={isInView ? { scaleX: 1 } : {}}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
@@ -93,7 +93,7 @@ const Mobile = () => {
 
 
 const Tracks = () => {
-  const isMobile = useMediaQuery({ maxWidth: 380 });
+  const isMobile = useMediaQuery({ maxWidth: 720 });
   return isMobile ? <Mobile /> : <Laptop />;
 };
 

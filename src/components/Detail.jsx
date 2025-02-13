@@ -43,7 +43,7 @@ const Mobile = ()=>{
 }
 
 const Detail = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 380px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 720px)" });
   return isMobile ? <Mobile/> : <Laptop/>
 };
 

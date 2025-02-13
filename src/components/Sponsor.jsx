@@ -94,7 +94,7 @@ const Mobile = () => {
   const isInView = useInView(ref, { triggerOnce: true, threshold: 0.3 });
 
   return (
-    <div className="pt-14 text-base text-center w-screen min-h-screen py-10 bg-no-repeat">
+    <div className="pt-14 text-base text-center w-screen  py-10 bg-no-repeat">
       <motion.h1
         ref={ref}
         className="text-3xl font-normal squid-font text-black mb-2"
@@ -154,7 +154,7 @@ const Mobile = () => {
 
 
 const Sponsors = () => {
-  const isMobile = useMediaQuery({ maxWidth: 380 });
+  const isMobile = useMediaQuery({ maxWidth: 720 });
   return isMobile ? <Mobile /> : <Laptop />
 };
 

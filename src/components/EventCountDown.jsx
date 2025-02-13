@@ -99,7 +99,7 @@ const Mobile = () => {
         <div className="flex flex-col items-center justify-center mt-9 w-screen mb-14">
             <motion.h1
                 ref={ref}
-                className="text-2xl font-normal squid-font text-black mb-1"
+                className="text-2xl font-normal squid-font text-black mb-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -138,7 +138,7 @@ const Mobile = () => {
 
 
 const Countdown = () => {
-    const isMobile = useMediaQuery({ maxWidth: 430 });
+    const isMobile = useMediaQuery({ maxWidth: 720 });
     return isMobile ? <Mobile /> : <Laptop />;
 };
 

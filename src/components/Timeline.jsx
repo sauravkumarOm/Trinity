@@ -30,9 +30,8 @@ const Laptop = () => {
       const coordinates = getCoordinates(milestone.percent);
       let verticalOffset = index % 2 === 0 ? 100 : -100;
 
-      // Move "Registration Open" milestone higher
       if (index === 0) {
-        verticalOffset -= 50; // Adjusting height for better visibility
+        verticalOffset -= 50;
       }
 
       return { ...milestone, coordinates, verticalOffset };
@@ -132,7 +131,7 @@ const Mobile = () => {
       style={{ backgroundImage: `url(${bg})` }}
     >
       <motion.h1
-        className="text-black text-4xl font-normal squid-font tracking-wide mb-10 text-center"
+        className="text-black text-4xl font-normal squid-font tracking-wide mb-2 text-center"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -190,7 +189,7 @@ const Mobile = () => {
 };
 
 const Timeline = () => {
-  const isMobile = useMediaQuery({ maxWidth: 430 });
+  const isMobile = useMediaQuery({ maxWidth: 720 });
   return isMobile ? <Mobile /> : <Laptop />;
 };
 
