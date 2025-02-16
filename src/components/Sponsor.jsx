@@ -141,11 +141,15 @@ const Mobile = () => {
           </a>
         </div>
         <div className="flex justify-center">
-          <div className="px-4 py-2 rounded-md shadow-md bg-[#ED184B] flex flex-col items-center text-xs
+          <a 
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=trinity@aitpune.edu.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 rounded-md shadow-md bg-[#ED184B] flex flex-col items-center text-xs
           text-white font-semibold cursor-pointer transition-all duration-300 ease-in-out
           transform hover:scale-110 hover:-translate-y-1 active:scale-95 active:translate-y-1">
             BECOME A SPONSOR
-          </div>
+          </a>
         </div>
       </div>
     </div>
