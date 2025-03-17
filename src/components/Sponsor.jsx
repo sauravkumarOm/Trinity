@@ -5,12 +5,20 @@ import Punekar from "../assets/punekar.png";
 import XYZ from "../assets/xyz.png";
 import Brochure from "../assets/Trainit_Brochure.pdf"
 import bg from "../assets/grid_bg.svg"
+import Group from "../assets/Group-11.png"
+import Certificate from "../assets/Group-5.png"
+import Worqhat from "../assets/Group-6.png"
+import Interview from "../assets/Group-8.png"
 import { useMediaQuery } from "react-responsive";
 
 const sponsors = [
   { title: "HOSTING PARTNER", logo: Unstop },
   { title: "DIGITAL MEDIA PARTNER", logo: Punekar },
   { title: "DOMAIN SPONSOR", logo: XYZ },
+  { title: "TECHNICAL PARTNER", logo: Group },
+  {title: "CERTIFICATE PARTNER", logo: Certificate},
+  {title: "TECHNICAL PARTNER", logo: Worqhat},
+  {title: "INTERVIEW PARTNER", logo: Interview}
 ];
 
 const Laptop = () => {
